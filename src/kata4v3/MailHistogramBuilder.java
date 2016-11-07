@@ -15,6 +15,7 @@ public class MailHistogramBuilder {
         for (String mail1 : mail) {
             histo.increment(new Mail(mail1).getDomanin());
         }
+        System.out.println(histo);
         return histo;
     }
 }
