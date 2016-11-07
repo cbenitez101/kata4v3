@@ -36,6 +36,10 @@ public class HistogramDisplay extends ApplicationFrame{
 
         private DefaultCategoryDataset createDataset() {
         DefaultCategoryDataset dataSet = new DefaultCategoryDataset();
+        histogram.keySet();
+            for (String key : histogram.keySet()) {
+                
+            }
         dataSet.addValue(8, "", "gmail.com");
         dataSet.addValue(2, "", "hotmail.com");
         dataSet.addValue(3, "", "yahoo.com");

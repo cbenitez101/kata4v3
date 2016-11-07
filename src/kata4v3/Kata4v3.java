@@ -20,10 +20,10 @@ public class Kata4v3 {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        String fileName = "emailsfilev1.txt";
+        String fileName = "C:\\Users\\Christo\\Desktop\\emailsfilev1.txt";
         ArrayList<String> mailList = MailListReader.read(fileName);
-        Histogram histogram = MailHistogramBuilder.build(mailList);
-        HistogramDisplay histo = new HistogramDisplay();
+        Histogram<String> histogram = MailHistogramBuilder.build(mailList);
+        HistogramDisplay histo = new HistogramDisplay(histogram);
         histo.execute();
     }
     
