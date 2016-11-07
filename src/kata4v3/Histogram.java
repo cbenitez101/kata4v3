@@ -16,7 +16,11 @@ public class Histogram<T> {
         if (histograma.containsKey(clave)) histograma.put(clave, histograma.get(clave) + 1);
         else histograma.put(clave, 1);
     }
-
+    
+    public Integer getKey(T clave){
+        return histograma.get(clave);
+    }
+    
     public Set<T> getKeySet() {
         return histograma.keySet();
     }
