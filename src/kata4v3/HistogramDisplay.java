@@ -1,7 +1,6 @@
 package kata4v3;
 
 import java.awt.Dimension;
-import java.util.HashMap;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -11,13 +10,14 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.ApplicationFrame;
 
 public class HistogramDisplay extends ApplicationFrame{
-    //public HashMap<String,Integer> histogram = new HashMap<>();
-    public HistogramDisplay() {
+    private final Histogram<String> histogram ;
+    public HistogramDisplay(Histogram<String> histogram) {
         super("HISTOGRAMA");
-        //this.histogram = histogram;
+        this.histogram = histogram;
         setContentPane(createPanel());
         pack();
     }
+
     
     private JPanel createPanel() {
         ChartPanel chartPanel = new ChartPanel(createChart(createDataset()));
