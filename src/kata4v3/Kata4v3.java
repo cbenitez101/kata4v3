@@ -22,7 +22,6 @@ public class Kata4v3 {
         // TODO code application logic here
         String fileName = "C:\\Users\\Christo\\Desktop\\emailsfilev1.txt";
         ArrayList<String> mailList = MailListReader.read(fileName);
-        System.out.println(mailList);
         Histogram<String> histogram = MailHistogramBuilder.build(mailList);
         HistogramDisplay histo = new HistogramDisplay(histogram);
         histo.execute();

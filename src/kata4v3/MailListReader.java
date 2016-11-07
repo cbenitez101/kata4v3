@@ -21,7 +21,6 @@ public class MailListReader {
                 mailList.add(mail);
             }
         }
-        System.out.println(mailList);
         return mailList;
 
 
